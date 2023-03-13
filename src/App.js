@@ -1,13 +1,13 @@
-import "./App.css";
-import Sidebar from "./components/Sidebar";
-import Route from "./components/Route";
-import AccordionPage from "./pages/AccordionPage";
-import DropdownPage from "./pages/DropdownPage";
-import ButtonsPage from "./pages/ButtonsPage";
+import Sidebar from './components/Sidebar';
+import Route from './components/Route';
+import AccordionPage from './pages/AccordionPage';
+import DropdownPage from './pages/DropdownPage';
+import ButtonPage from './pages/ButtonsPage';
 import ModalPage from './pages/ModalPage';
-function App() {
+import TablePage from './pages/TablePage';
 
-  return  (
+function App() {
+  return (
     <div className="container mx-auto grid grid-cols-6 gap-4 mt-4">
       <Sidebar />
       <div className="col-span-5">
@@ -18,11 +18,16 @@ function App() {
           <DropdownPage />
         </Route>
         <Route path="/buttons">
-          <ButtonsPage/>
+          <ButtonPage />
         </Route>
         <Route path="/modal">
           <ModalPage />
         </Route>
+        <Route path="/table">
+          <TablePage />
+        </Route>
+
+  
       </div>
     </div>
   );
